@@ -1,0 +1,321 @@
+:root{
+    --second-color: black;
+    --first-color: white;
+    --step--2: clamp(0.78rem, calc(0.77rem + 0.03vw), 0.80rem);
+    --p: clamp(0.94rem, calc(0.92rem + 0.11vw), 1.00rem);
+    --h6: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
+    --h5: clamp(1.35rem, calc(1.28rem + 0.37vw), 1.56rem);
+    --h4: clamp(1.62rem, calc(1.50rem + 0.58vw), 1.95rem);
+    --h3: clamp(1.94rem, calc(1.77rem + 0.87vw), 2.44rem);
+    --h2: clamp(2.33rem, calc(2.08rem + 1.25vw), 3.05rem);
+    --h1: clamp(2.80rem, calc(2.45rem + 1.77vw), 3.82rem);
+}
+html{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.check *,
+.check{
+    outline: 1px solid white;
+}
+
+.d-flex{
+    display: flex;
+}
+
+
+/* img */
+img{
+    width: 100%;
+    height: auto;
+}
+
+
+/* paddings */
+
+
+
+
+
+body{
+    background-color: black;
+    color: white;
+    margin: 0;
+    
+}
+
+/* header */
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+    gap: .5rem;
+    padding: .5rem;
+    font-size: var(--h5);
+}
+.header button{
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: var(--h5);
+    cursor: pointer;
+}
+.header img{
+    width: 35px;
+    border-radius: 50%;
+    outline: .001px solid white;
+}
+.youtube-brand a:nth-child(1){
+    align-self: center;    
+    color: red;    
+}
+.youtube-brand {
+    gap: .3rem;
+    flex: .1 1 4rem;
+    justify-content: center;
+    
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.youtube-brand sup{
+    padding-top: 1.3em;
+    font-size: .8rem;
+    opacity: .8;
+}
+.header-right-icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: .8rem;
+    flex: .4 1 auto;
+}
+.header-serch-bar {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+    display: none;
+}
+.header-serch-bar .fa-microphone {
+    padding-left: .5rem;
+}
+
+.header-serch-bar input{
+    background-color: black;    
+    border: none;    
+    min-width: 50px;
+    width: 100%;
+    max-width: 250px;
+    /* max-width: 100%; */
+}
+
+
+main{
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* side bar main */
+
+main aside{    
+    opacity: 0;
+    flex-direction: column;
+    width: 0rem;
+    align-items: center;
+    padding: 2rem 0;
+    transition: .5s opacity ease;
+}
+main aside h6{
+    margin-top: .4rem;
+    margin-bottom: 2.7rem;
+}
+main aside i{
+    font-size: 1.3rem;
+}
+
+
+
+/* recomendation bar */
+
+.recomendations-bar{
+    overflow-x: hidden;
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.recomendation-nav{
+    width: 200%;
+    display: flex;
+    gap: 1rem;    
+    justify-self: start;
+    justify-self: flex-start;
+    align-self: flex-start;
+}
+
+.recomendation-item{
+    background-color: #272727;
+    font-size: .9rem;
+    padding: .3rem .5rem;
+    border-radius: 20%;
+}
+.recomendation-item-first{
+    background-color: #f1f1f1;
+    color: black;
+}
+
+/* video cards */
+
+.videos-container{
+    padding: 1rem 1rem;
+    display: grid;
+    /* grid-template-columns: repeat(2, 1fr); */
+    gap: 1rem;
+}
+
+
+iframe{
+    width: 100%;
+    height: auto;
+}
+
+.video-card img{
+    width: 2.2rem;
+    border-radius: 50%;      
+    align-self: self-start;
+}
+
+.video-card-info{
+    display: flex;
+    padding: .3rem 0;
+    justify-content: center;
+    gap: .8rem;
+}
+.video-card-details{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: .5rem;    
+
+}
+.video-card-details *{
+    margin: 0;
+}
+.video-card-details h5:nth-child(2),
+.video-card-details h6{
+    opacity: .9;
+}
+
+@media screen and (min-width: 768px) {
+    main aside{
+        display: flex;
+        width: 5rem;
+        opacity: 1;
+    }
+}
+
+
+@media screen and (min-width: 355px) {
+    .videos-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+}
+
+@media screen and (min-width: 550px) {
+    .videos-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .header-serch-bar{
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .videos-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media screen and (min-width: 1200px) {
+    .videos-container{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* modal menu bar */
+
+.bars-menu-modal{
+    position: fixed;
+    background-color: rgba(0, 0, 0, .5);
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+.bars-menu-container{
+    width: 15rem;
+    background-color: black;
+    height: 100%;
+    padding-left: 1rem;
+}
+
+.bars-menu-container div:nth-child(2){
+    margin-top: 2rem;    
+}
+.bars-menu-container div:nth-child(5){
+    margin-top: 2rem;    
+}
+
+.bars-and-brand{
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+}
+.fa-youtube{
+    font-size: 1.7rem;
+}
+
+
+.youtube-brand{
+    padding-left: 2rem;
+}
+
+.modal-item{
+    display: flex;
+    align-items: center;
+    height: 2.8rem;
+    margin-bottom: .5rem; 
+    cursor: pointer;   
+}
+.modal-item:hover{
+    background-color: #464141;
+}
+.modal-item i{
+    font-size: 1.5rem;
+}
+.modal-item h6{
+    padding-left: 2rem;
+    font-size: var(--p);
+}
+.bars-and-brand button{
+    background-color: black;
+    color: white;
+    font-size: 1.5rem;
+    padding: 0;
+    cursor: pointer;
+}
