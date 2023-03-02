@@ -53,7 +53,7 @@ body{
     justify-content: space-between;
     align-items: center;
     height: 3rem;
-    gap: .5rem;
+    gap: .49rem;
     padding: .5rem;
     font-size: var(--h5);
 }
